@@ -1,5 +1,14 @@
 # Grocery List
 
+[![Swift](https://img.shields.io/badge/Swift-5-F05138?style=flat&logo=swift&logoColor=white)](https://swift.org)
+[![SwiftUI](https://img.shields.io/badge/SwiftUI-UI-0066CC?style=flat&logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
+[![Platform](https://img.shields.io/badge/Platform-iOS%20%2F%20macOS-000000?style=flat&logo=apple&logoColor=white)](https://developer.apple.com)
+[![Observation](https://img.shields.io/badge/Observation-@Observable-5E5CE6?style=flat)](https://developer.apple.com/documentation/observation)
+[![Concurrency](https://img.shields.io/badge/Concurrency-async%20%2F%20await-F05138?style=flat&logo=swift&logoColor=white)](https://docs.swift.org/swift-book/LanguageGuide/Concurrency.html)
+[![XCTest](https://img.shields.io/badge/Tests-XCTest-34C759?style=flat)](https://developer.apple.com/xcode/)
+
+**Highlights:** SwiftUI · Observation (`@Observable` store & search) · Large-list performance (debounced search, background regroup) · Code quality (unit, large-list/search, and UI tests)
+
 Native **iOS** app for building a categorized grocery list: add items with type-aware categories, track completion, filter and search at scale, and review aggregate stats. Built to demonstrate solid **SwiftUI**, **Observation**, and **test-backed** list logic—not a toy CRUD demo.
 
 ![2124365-ios-grocery-list-app-medium-demo](https://github.com/user-attachments/assets/a7fc3c03-089c-4202-a3fe-7b89876a9a35)
@@ -21,6 +30,16 @@ Native **iOS** app for building a categorized grocery list: add items with type-
 | **Correctness** | Duplicate detection uses normalized keys (trimmed, case/whitespace-insensitive). Add API returns a typed result instead of silent failures. |
 | **UI** | `NavigationStack` + typed route for full list; environment-injected store; list rows split by context (home cards vs. full-list layout). |
 
+## Tech stack
+
+| Area | Details |
+|------|---------|
+| **Language** | Swift 5 |
+| **UI** | SwiftUI (`NavigationStack`, environment-injected `GroceryListStore`) |
+| **State** | Observation (`@Observable`); `@MainActor` store |
+| **List UX** | `IngredientListSearchModel`: debounced search, optional off-main regroup for very large snapshots |
+| **Quality** | XCTest (core + large-list/search), UI tests for navigation and search |
+
 ## Requirements
 
 - Xcode compatible with the project’s deployment target (see `GroceryList.xcodeproj`).
@@ -34,3 +53,7 @@ GroceryList/
 ├── GroceryListTests/      # Unit tests (core + large-list/search model)
 └── GroceryListUITests/    # UI tests (navigation and full-list search)
 ```
+
+## Author
+
+**Pann Cherry**
