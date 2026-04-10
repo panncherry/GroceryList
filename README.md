@@ -2,6 +2,9 @@
 
 Native **iOS** app for building a categorized grocery list: add items with type-aware categories, track completion, filter and search at scale, and review aggregate stats. Built to demonstrate solid **SwiftUI**, **Observation**, and **test-backed** list logic—not a toy CRUD demo.
 
+![2124365-ios-grocery-list-app-medium-demo](https://github.com/user-attachments/assets/a7fc3c03-089c-4202-a3fe-7b89876a9a35)
+
+
 ## What it does
 
 - **Add flow** — Item name + category picker (dairy, vegetables, fruits, breads, meats). Optional keyword-based category suggestion while typing. Duplicate names rejected with explicit result handling (empty / duplicate / success).
